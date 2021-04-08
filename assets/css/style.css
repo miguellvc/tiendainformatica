@@ -177,7 +177,12 @@
     color: tomato;
 }
 
-.product .content-product{
+.content-categories{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.category-products .content-product{
     width: 98%;
     display: grid;
     margin: 0px auto;
