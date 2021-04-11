@@ -22,7 +22,6 @@
 
         <div id="logo">
             <img src="assets/img/fibrami.png" alt="logo">
-
         </div>
         <div id="navbar">
             <ul>
@@ -57,10 +56,12 @@
             </ul>
         </div>
 
-        <div id="shopping-cart">
+        <div id="shopping-cart" >
             <div onclick="showCard()">
                 <img src="assets/img/cart.svg" alt="cart">
-                <span id="cart">1</span>
+                <span id="cart">
+                    
+                </span>
             </div>
         </div>
 
@@ -213,31 +214,23 @@
         </div>
     </section>
 
+    
     <!-- modal carrito de compras -->
-
     <section id="modal-container">
         <div class="modal-content">
             <h3>Carrito</h3>
             <div id="modal-products">
-              
-                <!-- <div class="modal-product">
-                    <img src="assets/img/setup.jpg" alt="">
-                    <div class="product-description">
-                        <h4>Memoria Ram <i class="fas fa-times"></i></h4>
-                        <p>Memoria Ram DDR4 16GB</p>
-                        <p>$ 4.500</p>
-                        <p><input type="number" value="1" min="1"> </p>
-                    </div>
-                </div> -->
             </div>
-            <div class="btn-comprar">
-                <button >Comprar</button>
+            <div class="btn-modal">
+                <button class="btn-comprar">Comprar</button>
+                <button onclick="closeModal()" class="btn-cancelar">cerrar</button>
             </div>
         </div>
     </section>
 
     <!-- archivos js -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/banner.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
 </body>
 
 </html>

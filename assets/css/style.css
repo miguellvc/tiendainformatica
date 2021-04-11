@@ -5,7 +5,7 @@
     rgba(3, 14, 14, 1) 0%,
     rgb(1, 2, 49) 100%
   );
-  --color-tertiary: white;
+  --color-secondary: white;
 }
 
 * {
@@ -21,15 +21,11 @@
 }
 
 #header {
-  /*      
-    box-shadow:  29px 29px 58px #c7c7c7,
-                 -29px -29px 58px #f9f9f9; */
-  /* position: fixed; */
+ 
   z-index: 1;
   width: 100%;
   height: 80px;
-  /* background: var(--color-primary); */
-  /* opacity: 0.; */
+
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 20px;
@@ -78,21 +74,33 @@
   border-bottom: 3px solid tomato;
 }
 #header #shopping-cart {
-  /* position: absolute; */
   grid-column: span 1;
 }
-#shopping-cart img {
-  width: 20%;
+#shopping-cart div{
+  position: absolute;
 }
+#shopping-cart img {
+  margin-top: 15px;
+  width: 50%;
+}
+#shopping-cart p{
+  position: relative;
+  top: -60px;
+
+  right: -30px;
+  font-family: Impact;
+  font-weight: lighter;
+  color: tomato;
+  font-size: 24px;
+  
+}
+
 
 /* banner principal */
 #banner-primary {
   width: 100%;
   height: 500px;
   border-radius: 50px;
-  /* background: #e0e0e0;
-    box-shadow:  29px 29px 58px #c7c7c7,
-                 -29px -29px 58px #f9f9f9; */
 }
 
 #banner-primary img {
@@ -109,8 +117,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  /* background-color: rgb(0, 4, 255); */
-  /* background-color: #EEEEEE; */
   box-shadow: 0px 0px 4px #eeeeee, 0px 0px 6px #eeeeee;
 }
 
@@ -123,10 +129,10 @@
   border: 1px solid rgb(207, 205, 205);
   border-radius: 5px;
   cursor: pointer;
-  background-color: white;
-  box-shadow: 0px 0px 4px white, 0px 0px 7px white;
+  background-color: var(--color-secondary);
+  box-shadow: 0px 0px 4px var(--color-secondary), 0px 0px 7px var(--color-secondary);
   transition: all 0.5s;
-  /* background-color: white; */
+
 }
 
 #services .card-services:hover {
@@ -166,7 +172,6 @@
   letter-spacing: 2px;
   border-radius: 6px 6px 0 0;
   margin-bottom: 10px;
-  /* background: var(--color-primary); */
 }
 
 .title-section::after {
@@ -200,7 +205,7 @@
   height: 450px;
   border-radius: 6px;
   margin-top: 20px;
-  background-color: white;
+  background-color: var(--color-secondary);
   box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
   transition: all 0.5s;
 }
@@ -270,17 +275,18 @@
 .setup-content .setup-card {
   flex-basis: 49%;
   position: relative;
-  background-color: white;
+  background-color: var(--color-secondary);
 }
 .setup-content .setup-card img {
   width: 100%;
   margin: 10px;
+  cursor: pointer;
 }
 .setup-content .setup-card h3 {
   position: absolute;
   font-size: 30px;
   top: 80%;
-  color: white;
+  color: var(--color-secondary);
   text-shadow: 0px 0px 1px white, 0px 0px 2px white;
 }
 .setup-card .title-right {
@@ -327,7 +333,7 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  color: white;
+  color: var(--color-secondary);
   top: 50%;
   transform: translateY(-50%);
   font-family: monospace;
@@ -363,12 +369,12 @@
 
 #footer p {
   margin: 0px auto;
-  color: white;
+  color: var(--color-secondary);
 }
 
 #footer div {
   margin: 20px;
-  color: white;
+  color: var(--color-secondary);
 }
 
 #footer h3 {
@@ -384,7 +390,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0px 0px 2px slategray, 0px 0px 4px slategray;
-  /* box-shadow: 0px 0px 2px white, 0px 0px 4px white, 0px 0px 4px white; */
 }
 
 .nosotros p {
@@ -401,6 +406,7 @@
 #footer strong img {
   width: 50px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 /* css para el modal de productos */
@@ -420,7 +426,7 @@
   margin: 0px auto;
   margin-top: 10px;
   padding: 10px;
-  background: white;
+  background: var(--color-secondary);
   border-radius: 10px;
   box-shadow: 0px 0px 4px white;
 }
@@ -461,7 +467,7 @@
     padding: 2px;
     border-radius: 8px;
     background-color: red;
-    color:white;
+    color: var(--color-secondary);
     margin-left: 3px;
     opacity: 0;
     transition: all 0.2s;
@@ -479,20 +485,28 @@
     height: 20px;
     margin-left: 10px;
 }
-.modal-content .btn-comprar{
+.modal-content .btn-modal{
     text-align: right;
     padding: 10px;
 }
-.btn-comprar button{
-    width: 200px;
+.btn-modal button{
     height: 40px;
     border: none;
-    background: #0B5ED7;
     font-weight: bold;
-    color: white;
+    color: var(--color-secondary);
     font-size: 18px;
     cursor: pointer;
 }
-.btn-comprar button:hover{
+
+.btn-comprar{
+    width: 150px;
+    background: #0B5ED7;
+}
+.btn-cancelar{
+    background:tomato;
+    width: 100px;
+}
+
+.btn button:hover{
     background-color: #1057c2;
 }
